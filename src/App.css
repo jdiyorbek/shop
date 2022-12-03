@@ -1,0 +1,70 @@
+.App {
+  text-align: center;
+}
+.content {
+  min-height: calc(100vh - 64px - 128px);
+}
+.cart {
+  height: 70px;
+  min-width: 70px;
+  word-wrap: none;
+  border-radius: 20px;
+  bottom: 25px;
+  right: 25px;
+  z-index: 25;
+}
+
+.cart:hover .word {
+  display: inline;
+}
+
+.bi-cart4 {
+  font-size: 1.5rem;
+  display: inline;
+}
+
+.bi-cart4 .word {
+  display: none;
+  font-size: 1.2rem;
+}
+
+/* .bi-cart4 .word:hover {
+  font-size: 1.2rem;
+  transition: .5s;
+  position: relative;
+  left: -100px;
+} */
+
+.basket{
+  position: fixed;
+  top: 0;
+  right: -90%;
+  box-shadow: 0 0 100px black;
+  z-index: 26;
+}
+
+.basket-open {
+  animation: open .5s ease-in-out;
+}
+
+@keyframes open {
+  from{right: 0%; opacity: 1;}
+  to{right: -80; opacity: 0;}
+}
+
+.basket-close {
+  animation: close .5s ease-in-out;
+}
+
+@keyframes close {
+  from{right: -80%; opacity: 0;}
+  to{right: 0; opacity: 1;}
+}
+
+.showBasket {
+  right: 0;
+}
+
+.basket-body {
+  height: calc(100vh - 64px - 56px);
+}
